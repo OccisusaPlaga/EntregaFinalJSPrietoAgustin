@@ -88,7 +88,7 @@ do {
             } while (texto !== 0);
             break;
         case 2:
-            alert("PrecioFinal()");
+            alert(PrecioFinal());
             break;
         case 3:
             do{
