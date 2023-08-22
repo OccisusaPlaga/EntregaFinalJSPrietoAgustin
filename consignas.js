@@ -12,12 +12,12 @@ const menu1= ""
 +"3-Pulpo-450$\n"
 +"4-Calamar-480$\n"
 +"0-Volver\n"
-+"s-cerrar\n"
 
 const menu2=""
 +"-Comprando 4 10%off\n"
 +"-Comprando 6 15%off\n"
 +"-comprando 8 25%off\n"
++"0-Volver\n"
 
 let Precio = 0;
 let PrecioVar = 0;
@@ -27,6 +27,13 @@ let descuentos = 0;
 function SumarProductos(Precio){
     PrecioVar += Precio;
     ProdTotales++;
+
+    if (ProdTotales >= 4 && ProdTotales < 6)
+    descuentos = 10;
+else if(ProdTotales >= 6 && ProdTotales <8)
+    descuentos = 15;
+else if(ProdTotales >=8 )
+    descuentos= 25;
 
     return "¡Agregaste un pez al carrito!\n\nPrecio del preducto: $"+Precio+".\n\nPrecio total de la compra: $"+PrecioVar+".\nCantidad de peces: "+ProdTotales+". Descuento aplicado: "+descuentos+"";
 
@@ -45,7 +52,7 @@ function PrecioFinal(){
     let Total=0;
 
     calcularDescuento();
-    if (descuentos == 0)
+    if (descuentos = 0)
     {
         Total = PrecioVar;
         return "El Precio Final de su compra es $"+Total+".\n\nLa compra no tiene descuentos.";
