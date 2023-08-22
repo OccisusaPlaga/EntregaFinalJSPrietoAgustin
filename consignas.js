@@ -1,6 +1,6 @@
 const menu0 = ""
 +"-MenuPrincipal\n"
-+"1-Comprar animal marino\n"
++"1-Comprar Peces\n"
 +"2-Ver Precio Total\n"
 +"3-Ver Descuentos Disponibles\n"
 +"0-Salir\n"
@@ -11,13 +11,13 @@ const menu1= ""
 +"2-Tortuga-200$\n"
 +"3-Pulpo-450$\n"
 +"4-Calamar-480$\n"
-+"0-Volver\n"
++"5-Volver\n"
 
 const menu2=""
 +"-Comprando 4 10%off\n"
 +"-Comprando 6 15%off\n"
 +"-comprando 8 25%off\n"
-+"0-Volver\n"
++"4-Volver\n"
 
 let Precio = 0;
 let PrecioVar = 0;
@@ -52,7 +52,7 @@ function PrecioFinal(){
     let Total=0;
 
     calcularDescuento();
-    if (descuentos = 0)
+    if (descuentos == 0)
     {
         Total = PrecioVar;
         return "El Precio Final de su compra es $"+Total+".\n\nLa compra no tiene descuentos.";
@@ -85,7 +85,7 @@ do {
                         alert(SumarProductos(480));
                         break;
                 }
-            } while (texto !== 0);
+            } while (texto !== 5);
             break;
         case 2:
             alert(PrecioFinal());
@@ -96,7 +96,7 @@ do {
                 switch (texto){
                 case 1:
                 }
-            }while(texto!==0)
+            }while(texto!==4)
             break;
         case 0:
             alert("!Vuelva Pronto!");
