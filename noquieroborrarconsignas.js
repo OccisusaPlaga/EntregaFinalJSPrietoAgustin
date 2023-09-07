@@ -1,4 +1,5 @@
-
+//conseguir un nombre para el acuario y fucionar las funciones de consignas con noquieroborrar consignas para algo mas interactivo
+//dejar de procastinar tanto
 console.table(peces);
 
 function filtrarPorPrecioMax(precioMaximo) {

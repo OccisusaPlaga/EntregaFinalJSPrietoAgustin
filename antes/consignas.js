@@ -1,4 +1,4 @@
-const menu0 = ""
+/*const menu0 = ""
 +"-MenuPrincipal\n"
 +"1-Comprar Peces\n"
 +"2-Ver Precio Total\n"
@@ -104,4 +104,4 @@ do {
         default:
             alert("El código no existe");
     }
-} while (texto !== 0);
+} while (texto !== 0);*/
