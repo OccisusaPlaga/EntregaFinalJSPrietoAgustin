@@ -1,19 +1,26 @@
-console.table(productos);
 
-function filtrarPorPrecioMax(precioMaximo){
-    const filtrados = productos.filter((producto) == producto.precio <= precioMaximo);
+console.table(peces);
 
-    let textoParaAlert='';
-    filtrados.forEach((producto) == {
-        textoParaAlert += `ID: ${producto.id} - Nombre: ${producto.nombre} - Precio $ ${producto.precio}\n`;
+function filtrarPorPrecioMax(precioMaximo) {
+
+  const filtrados = peces.filter((pez) => pez.precio <= precioMaximo);
+  
+  
+if (filtrados.length !=0) {
+    let textoAlert = '';
+    filtrados.forEach((pez) => {
+    textoAlert += `ID: ${pez.id} - Nombre: ${pez.nombre} - Precio $${pez.precio}\n`;
     });
-    alert(textoParaAlert);
+        alert(textoAlert);
+    } else {
+        alert('no tenemos nada disponible con esa cantidad de dinero');
+    }
 }
 
-let precio = parseFloat(prompt('Ingresa el precio maximo que puedes abonar (0-Salir del programa)'));
+let precio = parseFloat(prompt('Ingrese su cantidad de dinero disponible (0-Para salir)'));
 
-while(precio != 0){
-    filtrarPorPrecioMax(precio);
+while (precio !== 0) {
+  filtrarPorPrecioMax(precio);
 
-    precio = parseFloat(prompt('Ingresa el precio maximo que puedes abonar (0-Salir del programa)'));
+  precio = parseFloat(prompt('Ingrese su cantidad de dinero disponible (0-Para salir)'));
 }

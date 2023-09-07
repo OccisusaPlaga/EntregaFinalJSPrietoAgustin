@@ -1,4 +1,4 @@
-const productos = [{
+const peces = [{
     id: 1,
     imagen:"https://cdn0.bioenciclopedia.com/es/posts/1/7/1/pez_payaso_171_orig.jpg",
     nombre:"pez payaso",
