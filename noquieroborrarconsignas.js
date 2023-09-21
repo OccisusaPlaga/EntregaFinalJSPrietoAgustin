@@ -2,7 +2,7 @@
 //dejar de procastinar tanto
 console.table(peces);
 
-function filtrarPorPrecioMax(precioMaximo) {
+/*function filtrarPorPrecioMax(precioMaximo) {
 
   const filtrados = peces.filter((pez) => pez.precio <= precioMaximo);
   
@@ -24,4 +24,4 @@ while (precio !== 0) {
   filtrarPorPrecioMax(precio);
 
   precio = parseFloat(prompt('Ingrese su cantidad de dinero disponible (0-Para salir)'));
-}
+}*/
