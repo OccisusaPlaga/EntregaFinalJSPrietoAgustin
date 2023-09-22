@@ -39,3 +39,8 @@ card{
 .row{
   padding: 20px;
 }
+
+.fondotabla{
+  background-color: aliceblue;
+  text-align: left;
+}
