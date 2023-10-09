@@ -10,39 +10,55 @@
 </head>
 <body>
 
-    <div class="fondo">
-        <div style="background-color: rgb(8, 196, 133);">
+
             <h1 class="text-center"> Aquario Aletita Feliz</h1>
         </div>
-
-        <div class="container-fluid, background-image" style="text-align: center;">
-          
-            <article id="card" class="d-flex flex-wrap"></article>
-
-        <section class="fondotabla">
-            <h2>Carrito temporal hasta que este mas curtido</h2>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody id="tablacuerpo">
-
-                </tbody>
-            </table>
-            <h3 id="total">Total a Pagar $:</h3>
-        </section>
-
-              </div>
-
-
-
         
+
+ <div class="container">
+    <div class="sidebar">
+      <div class="logo">Aquario Aletita Feliz</div>
+      <input type="text" id="txtSearch" placeholder="Search Product..." />
+      <h3>Categorias</h3>
+      <ul class="category-list">
+
+      </ul>
+      <h3>Rango de Precio</h3>
+      <div class="Precio">
+        <input type="Rango" id="RangoDePrecio" />
+        <span class="ValordePrecio">500</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="productos"></div>
     </div>
 
+    <section class="fondotabla">
+      <h2>Carrito </h2>
+      <div class="table-responsive">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+              </tr>
+          </thead>
+          <tbody id="tablacuerpo">
+
+          </tbody>
+      </table>
+    </div>
+      <h3 id="total">Total a Pagar $:</h3>
+      <td>
+        <button class="btn btn-primary agregar-button">Comprar</button>
+      </td>
+  </section>
+
+  <p class="Ventas" id="Ventas">Ventas: 0</p>
+
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="noquieroborrarconsignas.js"></script>
     <script src="peces.js"></script>
