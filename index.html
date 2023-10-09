@@ -7,6 +7,8 @@
     <title>EntregaFinalJSPrietoAgustin</title>
     
     <link rel="stylesheet" href="./styles/estilos.css">
+    <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
 
@@ -15,11 +17,11 @@
         </div>
         
 
- <div class="container">
+ <div class="container-fluid text-lg-center">
     <div class="sidebar">
       <div class="logo">Aquario Aletita Feliz</div>
       <input type="text" id="txtSearch" placeholder="Search Product..." />
-      <h3>Categorias</h3>
+      <h2>Categorias</h2>
       <ul class="category-list">
 
       </ul>
@@ -28,6 +30,36 @@
         <input type="Rango" id="RangoDePrecio" />
         <span class="ValordePrecio">500</span>
       </div>
+    </div>
+    <div class="sidebar">
+      <h3>¡Oferta Aterradora!</h3>
+      <p>El precio de nuestros productos se reducirá cuando el temporizador llegue a cero.</p>
+      <div id="timer">Tiempo restante: <span id="countdown">00:00:00</span></div>
+
+      <script>
+        
+        const endDate = new Date('2023-12-31T00:00:00').getTime();
+
+        
+        function updateTimer() {
+    const countdownElement = document.getElementById('countdown');
+    const productPriceElement = document.getElementById('productPrice');
+    
+    const daysRemaining = 23; 
+
+    if (daysRemaining <= 0) {
+        countdownElement.textContent = '0 días';
+        
+        actualizarPrecioProductos();
+    } else {
+        countdownElement.textContent = `${daysRemaining} días`;
+    }
+}
+
+
+        setInterval(updateTimer, 1000);
+
+    </script>
     </div>
     <div class="content">
       <div class="productos"></div>
@@ -59,9 +91,10 @@
 
     </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="noquieroborrarconsignas.js"></script>
-    <script src="peces.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="noquieroborrarconsignas.js"></script>
    
 
 </body>

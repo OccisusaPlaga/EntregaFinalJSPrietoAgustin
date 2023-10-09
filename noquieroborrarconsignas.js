@@ -87,7 +87,7 @@ function displayProducts(productos) {
     <span class="nombre">${producto.nombre}</span>
     <span class="precio">$${producto.precio}</span>
     <span class="categoria">${producto.categoria}</span>
-    <a href="#" name="cart" class="btn btn-primary shop-item-button">Comprar</a>
+    <a href="#" name="cart" class="btn btn-primary shop-item-button">Agregar al carro</a>
   </div>
 </div>`
       )
@@ -180,7 +180,7 @@ const tablaCuerpo = document.getElementById("tablacuerpo");
 function agregaralcarro(producto) {
   carrito.push(producto);
   console.table(carrito);
-  alert(`Agregaste ${producto.nombre} al carro`);
+  Swal.fire(`Agregaste ${producto.nombre} al carro`);
 
   actualizarTabla();
 }
@@ -204,12 +204,13 @@ function actualizarTabla() {
 }
 
 
-const agregarButtons = document.querySelectorAll(".agregar-button");
+const ComprarButtons = document.querySelectorAll(".comprar-button");
 
 
-agregarButtons.forEach((button) => {
+comprarButtons.forEach((button) => {
   button.addEventListener("click", () => {
 
+    
     let Ventas = localStorage.getItem("Ventas") || 0;
 
 
@@ -217,6 +218,8 @@ agregarButtons.forEach((button) => {
 
 
     localStorage.setItem("Ventas", Ventas);
+
+    Swal.fire("¡Gracias por tu compra!");
   });
 });
 
@@ -252,5 +255,10 @@ if (VentasClear) {
   });
 }
 
+localStorage.setItem("pecesuelos",JSON.stringify(data))  //para guardar futuro stock
 
-
+function actualizarPrecioProductos() {
+  for (const producto of data) {
+      producto.precio = precio*0.50;
+  }
+}
