@@ -40,24 +40,32 @@
         
         const endDate = new Date('2023-12-31T00:00:00').getTime();
 
-        
-        function updateTimer() {
+function updateTimer() {
     const countdownElement = document.getElementById('countdown');
     const productPriceElement = document.getElementById('productPrice');
-    
-    const daysRemaining = 23; 
+
+    const daysRemaining = 23;
 
     if (daysRemaining <= 0) {
         countdownElement.textContent = '0 días';
-        
-        actualizarPrecioProductos();
+
+        data.forEach(product => {
+            product.precio = product.precio * 0.5; 
+        });
+
+
+        mostrarProductos(data);
+
     } else {
         countdownElement.textContent = `${daysRemaining} días`;
     }
 }
 
+function mostrarProductos(data) {
 
-        setInterval(updateTimer, 1000);
+}
+
+setInterval(updateTimer, 1000);
 
     </script>
     </div>

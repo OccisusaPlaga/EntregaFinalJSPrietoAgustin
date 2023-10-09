@@ -204,61 +204,32 @@ function actualizarTabla() {
 }
 
 
-const ComprarButtons = document.querySelectorAll(".comprar-button");
+const agregarButtons = document.querySelectorAll(".agregar-button");
 
 
-comprarButtons.forEach((button) => {
+agregarButtons.forEach((button) => {
   button.addEventListener("click", () => {
 
-    
     let Ventas = localStorage.getItem("Ventas") || 0;
 
 
     Ventas++;
-
+    
 
     localStorage.setItem("Ventas", Ventas);
 
-    Swal.fire("¡Gracias por tu compra!");
+    carrito.length = 0; 
+    actualizarTabla(); 
+
+    setTimeout(()=>{
+      Swal.fire(`Gracias por tu compra`);
+    }, 3000)
+    Swal.fire(`Procesando compra aguarde un minuto`);
+
   });
 });
 
-function vaciarTabla() {
-  carrito.length = 0; 
-  actualizarTabla(); 
-}
-
-const vaciarButton = document.getElementById("vaciar-button");
-
-if (vaciarButton) {
-  vaciarButton.addEventListener("click", () => {
-    vaciarTabla();
-  });
-}
-
-const VentasClear = document.getElementById("VentasClear");
-
-if (VentasClear) {
-  VentasClear.addEventListener("click", () => {
-
-    let Ventas = localStorage.getItem("Ventas") || 0;
-
-    if (Ventas > 0) {
-      vaciarTabla();
-    } else {
-
-      Ventas++;
-
-      localStorage.setItem("Ventas", Ventas);
-
-    }
-  });
-}
 
 localStorage.setItem("pecesuelos",JSON.stringify(data))  //para guardar futuro stock
 
-function actualizarPrecioProductos() {
-  for (const producto of data) {
-      producto.precio = precio*0.50;
-  }
-}
+
