@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "nombre": "Pez Payaso",
+      "imagen": "https://cdn0.bioenciclopedia.com/es/posts/1/7/1/pez_payaso_171_orig.jpg",
+      "precio": 200,
+      "categoria": "pez"
+    },
+    {
+      "id": 2,
+      "nombre": "Caballo de Marx2",
+      "imagen": "https://www.faunia.es/content/dam/fau/images/descubre-faunia/planea-tu-visita/animales/peces/caballito-de-mar/Caballito-de-mar-Animales-Faunia-main.jpg",
+      "precio": 390,
+      "categoria": "pez"
+    },
+    {
+      "id": 3,
+      "nombre": "Tortuga",
+      "imagen": "https://i.pinimg.com/originals/9c/3e/ca/9c3eca13f3e80ed68140a001771bdc35.jpg",
+      "precio": 509,
+      "categoria": "especial"
+    },
+    {
+      "id": 4,
+      "nombre": "Nutria",
+      "imagen": "https://www.nationalgeographic.com.es/medio/2021/08/05/2-nutria-marina_015d6f8e_1280x849.jpg",
+      "precio": 800,
+      "categoria": "especial"
+    },
+    {
+      "id": 5,
+      "nombre": "Ajolote",
+      "imagen": "https://i.redd.it/t3kma9ki25q71.jpg",
+      "precio": 1000,
+      "categoria": "especial"
+    },
+    {
+      "id": 6,
+      "nombre": "Pulpo",
+      "imagen": "https://c1.staticflickr.com/1/299/18972544510_4f433b72a2_z.jpg",
+      "precio": 1080,
+      "categoria": "pez"
+    },
+    {
+      "id": 7,
+      "nombre": "Calamar",
+      "imagen": "https://cdn.eldestapeweb.com/eldestape/052021/1622244399331.webp?cw=312&ch=175&extw=jpg",
+      "precio": 1200,
+      "categoria": "pez"
+    },
+    {
+      "id": 8,
+      "nombre": "Pez Globo",
+      "imagen": "https://media.istockphoto.com/id/638309968/photo/underwater-cute-salt-water-porcupine-balloonfish-fish-smiling.jpg?s=612x612&w=0&k=20&c=hNFzM3eRHHx-P1I8lZCx6ABPphFmzlCQXgujBUyZZ3A=",
+      "precio": 4000,
+      "categoria": "pez"
+    },
+    {
+      "id": 9,
+      "nombre": "Pez Roca",
+      "imagen": "https://www.aquariumbcn.com/wp-content/uploads/2022/08/Synanceia-verrucosa.jpg",
+      "precio": 3800,
+      "categoria": "pez"
+    }
+  ]

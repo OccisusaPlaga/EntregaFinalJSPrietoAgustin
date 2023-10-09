@@ -101,7 +101,6 @@ function displayProducts(productos) {
 
 function setCategories() {
   const allCategories = data.map((producto) => producto.categoria);
-
   const catagories = [
     "Todos",
     ...allCategories.filter((producto, index) => {
